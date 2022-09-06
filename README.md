@@ -277,7 +277,20 @@ int main()
 }
 ```
 
-https://www.tutorialspoint.com/format-specifiers-in-c Experiment with different casting examples.
+https://www.tutorialspoint.com/format-specifiers-in-c 
+| Format Specifier | Type                          |
+|------------------|-------------------------------|
+| %c               | Character                     |
+| %d               | Signed integer                |
+| %e or %E         | Scientific notation of floats |
+| %f               | Float values                  |
+| %g or %G         | Similar as %e or %E           |
+| %hi              | Signed integer (short)        |
+| %hu              | Unsigned Integer (short)      |
+| %i               | Unsigned integer              |
+| %l or %ld or %li | Long                          |
+
+#### Experiment with different casting examples.
 ```c
 #include <stdio.h>
 
