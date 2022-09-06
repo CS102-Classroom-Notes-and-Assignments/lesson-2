@@ -327,11 +327,11 @@ int main()
 
 ## The Unary Operator '!'
 Negates the boolean
-!0 -- true
-!1 -- false
-!100 -- false
-!(5 < 2) -- true
-!((5 < 2) || !(3 < 1)) -- false
+  - !0 -- true
+  - !1 -- false
+  - !100 -- false
+  - !(5 < 2) -- true
+  - !((5 < 2) || !(3 < 1)) -- false
 
 We usually write: if (!valid) than if (valid ==0)
 
