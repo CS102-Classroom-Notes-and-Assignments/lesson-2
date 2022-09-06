@@ -72,15 +72,17 @@ Certain characters can be represented in character and string constants by escap
 
 
 **Constant expression** - expression with only constants
+
 **String constant (string literal)** - sequence of zero or more characters surrounded by double quotes. Technically, a string constant is an array of characters. The internal representation of a string has a null character ‘\0’ at the end, so the physical storage required is one more than the number of characters written in between the quotes.
 ‘x’ (integer used to produce the numeric value of the letter x) is not the same as “x” (array of characters that contains one character, the letter x, and a ‘\0’”.
 
 The qualifier const can be applied to the declaration of any variable to specify that its value will not be changed. For an array the const qualifier says that the elements will not be altered. 
+```c
 const double e = 2.71828;
 Const char msg[] = “warning”;
 int strlen(const char[]); //indicates that the function does not change that array.
-
-automatic variable - local variable that is allocated and deallocated automatically when program flow enters and leaves the variable scope. Automatic variables for which there is no explicit initializer have undefined (garbage) values. External and static variables are initialized to 0 by default.
+```
+**automatic variable** - local variable that is allocated and deallocated automatically when program flow enters and leaves the variable scope. Automatic variables for which there is no explicit initializer have undefined (garbage) values. External and static variables are initialized to 0 by default.
 
 ## More Constants
 You can create constants with #define
