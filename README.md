@@ -1,7 +1,7 @@
 # lesson-2 notes
 
 ## Types, Variables, and Operations
-
+https://www.tutorialspoint.com/cprogramming/c_data_types.htm
 | Type           | Storage size                      | Value range                                          |  
 |----------------|-----------------------------------|------------------------------------------------------|
 | char           | 1 byte                            | -128 to 127 or 0 to 255                              |  
@@ -13,6 +13,13 @@
 | unsigned short | 2 bytes                           | 0 to 65,535                                          |   
 | long           | 8 bytes or (4bytes for 32 bit OS) | -9223372036854775808 to 9223372036854775807          | 
 | unsigned long  | 8 bytes                           | 0 to 18446744073709551615                            |  
+
+| Type        | Storage size | Value range            | Precision         |
+|-------------|--------------|------------------------|-------------------|
+| float       | 4 byte       | 1.2E-38 to 3.4E+38     | 6 decimal places  |
+| double      | 8 byte       | 2.3E-308 to 1.7E+308   | 15 decimal places |
+| long double | 10 byte      | 3.4E-4932 to 1.1E+4932 | 19 decimal places |
+
 
 ```c
 char a; // a single byte, capable of holding one character
