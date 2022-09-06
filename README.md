@@ -338,4 +338,4 @@ We usually write: if (!valid) than if (valid ==0)
 
 # HOMEWORK - due before the start of next class (9/13)
   - Read The C Programming Language, 2nd Edition - Kerninghan & Ritchie, Chapter 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7
-  - Github Homework Assignment:
+  - Github Homework Assignment: https://classroom.github.com/a/4-h_v2lM
