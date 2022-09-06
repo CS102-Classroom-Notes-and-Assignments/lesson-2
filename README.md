@@ -1,4 +1,4 @@
-# lesson-2
+# lesson-2 notes
 
 ## Types, Variables, and Operations
 ```c
