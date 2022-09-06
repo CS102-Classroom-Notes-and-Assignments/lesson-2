@@ -80,7 +80,7 @@ Certain characters can be represented in character and string constants by escap
 The qualifier const can be applied to the declaration of any variable to specify that its value will not be changed. For an array the const qualifier says that the elements will not be altered. 
 ```c
 const double e = 2.71828;
-Const char msg[] = “warning”;
+const char msg[] = “warning”;
 int strlen(const char[]); //indicates that the function does not change that array.
 ```
 **automatic variable** - local variable that is allocated and deallocated automatically when program flow enters and leaves the variable scope. Automatic variables for which there is no explicit initializer have undefined (garbage) values. External and static variables are initialized to 0 by default.
