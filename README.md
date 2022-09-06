@@ -67,6 +67,7 @@ char tab = '\t';
 Certain characters can be represented in character and string constants by escape sequences like \n (newline); these sequences look like two characters, but represent only one.
 
 ![alt text](Escape_Sequences.png)
+
 ***** Note for characters you must use single quotes. 
 
 
