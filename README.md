@@ -36,7 +36,9 @@ int octal = 037; // leading 0 on an integer means octal, so this is decimal 31
 int hex = 0x1f // leading 0x or 0X means hexadecimal, so this is decimal 31
 // octal and hexadecimal constants may also be followed by L to make them long and U to make // them unsigned:0XFUL is an unsigned long constant with value 15 decimal.
 ```
+
 A character constant is an integer, written as one character within single quotes such as ‘x’. The value of a character constant is the numeric value of the character in the machine’s character set.
+
 ```c
 int val = 'c';
 char tab = '\t';
@@ -49,8 +51,8 @@ Certain characters can be represented in character and string constants by escap
 
 
 
-Constant expression - expression with only constants
-String constant (string literal) - sequence of zero or more characters surrounded by double quotes. Technically, a string constant is an array of characters. The internal representation of a string has a null character ‘\0’ at the end, so the physical storage required is one more than the number of characters written in between the quotes.
+**Constant expression** - expression with only constants
+**String constant (string literal)** - sequence of zero or more characters surrounded by double quotes. Technically, a string constant is an array of characters. The internal representation of a string has a null character ‘\0’ at the end, so the physical storage required is one more than the number of characters written in between the quotes.
 ‘x’ (integer used to produce the numeric value of the letter x) is not the same as “x” (array of characters that contains one character, the letter x, and a ‘\0’”.
 
 The qualifier const can be applied to the declaration of any variable to specify that its value will not be changed. For an array the const qualifier says that the elements will not be altered. 
@@ -60,9 +62,9 @@ int strlen(const char[]); //indicates that the function does not change that arr
 
 automatic variable - local variable that is allocated and deallocated automatically when program flow enters and leaves the variable scope. Automatic variables for which there is no explicit initializer have undefined (garbage) values. External and static variables are initialized to 0 by default.
 
-## MORE CONSTANTS
+## More Constants
 You can create constants with #define
-```
+```c
 #include <stdio.h>
 #define PI 3.14
 
@@ -75,11 +77,11 @@ void main()
 }
 ```
 
-## ENUMS
+## Enums
 You can create constants with enum
 Enumeration constant - list of constant integer values. The first enum has value 0, the next 1, and so on, unless explicit values are specified. 
 Such as: 
-```
+```c
 enum months = {Jan = 1, FEB, MAR, APR} 
 /* FEB = 2, Mar = 3, ..*/
 
@@ -106,7 +108,7 @@ void main()
 
 Names do have to be distinct but values do not have to be distinct.
 
-OPERATIONS
+# OPERATIONS
   - Binary arithmetic operators are +, -, *, /, and the modulus operator %.
     - The % operator cannot be applied to a float or double.
     - Integer division truncates any fractional part. The direction of truncation for / and the sign of the result for % are machine-dependent for negative operands as is the action taken on overflow or underflow. 
@@ -116,9 +118,9 @@ OPERATIONS
     - Multiplication & Division *, /, %
     - Addition & Subtraction +, =
 
-EXAMPLE
+#### Operations Example
 Convert 35°F to °C.
-```
+```c
 #include <stdio.h>
 
 /* Prints the conversion of a given Fahrenheit to Celsius */
@@ -134,9 +136,9 @@ void main()
 }
 ```
 
-TYPE CONVERSIONS 
-ADDING A FLOAT AND AN INT
-```
+# Type Conversions 
+## Adding a Float and an Int
+```c
 #include <stdio.h>
 
 int main()
@@ -152,8 +154,8 @@ int main()
 Note that precision is lost if storing in an int.
 
 
-ADDING A FLOAT AND AN INT
-```
+## Adding a Float and an int
+```c
 #include <stdio.h>
 
 int main()
@@ -169,8 +171,8 @@ int main()
 Note that the int is implicitly convert to a float in the addition.
 
 
-LIMITS
-```
+# Limits
+```c
 #include <stdio.h>
 #include <limits.h>
 
@@ -188,7 +190,7 @@ int main()
 ```
 https://www.cplusplus.com/reference/climits/ 
 
-Type Conversions 
+# Type Conversions 
    - When an operator has operands of different types, they are converted to a common type according to a small number of rule. In general the only automatic conversions are those that convert a narrower operand into a wider one without losing information such as converting an integer to a floating point in an expression like f + i. 
     - If there are no unsigned operands:
       - If either operand is long double, convert the other to long double.
@@ -210,14 +212,14 @@ Longer integers are converted to shorter ones or to chars by dropping the excess
 int i;
 char c;
 
-I = c;
+i = c;
 c=i;
 ```
 Type conversion also takes place when arguments are passed to functions. In the absence of a function prototype, char and short become int, and float becomes double. This is why we have declared function arguments to be int and double even when the function is called with char and float. If arguments are declared by a function prototype, as they normally should be, the declaration causes automatic coercion of any arguments when the function is called.
 
 ## WRAPPING
   - A char is just a small integer so chars may be freely used in arithmetic expressions. This permits considerable flexibility in certain kinds of character transformations. 
-````c
+```c
 #include <stdio.h>
 
 int main()
@@ -233,17 +235,14 @@ The definition of C guarantees that any character in the machine’s standard pr
 
 ![alt text](ASCII_ConversionChart.png)
 
-## CASTING
-Not recommended as it is "hacky"
-(type-name) expression
-This will force the expression to be the type you specified
-
-## CASTING EXAMPLE
-Be very careful when casting types as it can lead to unexpected behaviors.
+## Casting
+  - This will force the expression to be the type you specified, but is not recommended as it is "hacky" as it can lead to unexpected behaviors.
+ 
+Syntax: (type-name) expression
 ```c
 #include <stdio.h>
 #include <math.h>
-
+#### Casting example
 int main()
 {
     float f = 4.5f;
@@ -255,8 +254,8 @@ int main()
     return 0;
 }
 ```
-https://www.tutorialspoint.com/format-specifiers-in-c Experiment with different casting examples.
 
+https://www.tutorialspoint.com/format-specifiers-in-c Experiment with different casting examples.
 ```c
 #include <stdio.h>
 
@@ -271,11 +270,11 @@ int main() {
 }
 ```
 
-# RELATIONAL & LOGICAL OPERATORS
-## RELATIONAL & EQUALITY OPERATORS
+# Relational & Logical Operators
+## Relational & Equality Operators
 Relational Operators:
-  - >  greater than
-  - >=  greater than or equal to
+  - \>  greater than
+  - \>=  greater than or equal to
   - <  less than
   - <=  less than or equal to
 
@@ -285,7 +284,7 @@ Equality Operators:
 
 The relational operators have higher precedence than the equality operators. Relational operators have lower precedence than arithmetic operators, so an expression like i < lim-1 is taken as i < (lim-1).
 
-## RELATIONAL OPERATORS EXAMPLE
+#### Relational Operators Example
 ```c
 #include <stdio.h>
 #include <stdbool.h>
@@ -300,8 +299,7 @@ int main()
 ```
 We generally don't print out bools like in the example above.
 
-
-## LOGICAL OPERATORS:
+## Logical Operators:
   - &&  logical and
   - ||  logical or
 
@@ -313,7 +311,7 @@ The precedence of && is higher than that of ||, and both are lower than relation
 For numeric types, 0 is equivalent to false and any non-zero is true.
 These are different from bitwise operations which we will learn later.
 
-## LOGICAL OPERATORS EXAMPLE
+#### Logical Operators Example
 ```c
 #include <stdio.h>
 #include <stdbool.h>
@@ -327,7 +325,7 @@ int main()
 }
 ```
 
-# THE UNARY OPERATOR '!'
+## The Unary Operator '!'
 Negates the boolean
 !0 -- true
 !1 -- false
@@ -338,8 +336,6 @@ Negates the boolean
 We usually write: if (!valid) than if (valid ==0)
 
 
-HOMEWORK
-The C Programming Language, 2nd Edition - Kerninghan & Ritchie
-Chapter 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7
-https://classroom.github.com/g/atr190HO
-due 09/18 @ 11:59PM
+# HOMEWORK
+  - Read The C Programming Language, 2nd Edition - Kerninghan & Ritchie, Chapter 2.1, 2.2, 2.3, 2.4, 2.5, 2.6, 2.7
+  - Github Homework Assignment:
