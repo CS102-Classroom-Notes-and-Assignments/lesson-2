@@ -105,7 +105,7 @@ You can create constants with enum
 Enumeration constant - list of constant integer values. The first enum has value 0, the next 1, and so on, unless explicit values are specified. 
 Such as: 
 ```c
-enum months = {Jan = 1, FEB, MAR, APR} 
+enum months {Jan = 1, FEB, MAR, APR} 
 /* FEB = 2, Mar = 3, ..*/
 
 #include <stdio.h>
